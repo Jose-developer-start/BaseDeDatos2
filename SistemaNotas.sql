@@ -40,5 +40,3 @@ INSERT INTO carrera(nombre) VALUES('Licenciatura en ciencias de la computacion')
 INSERT INTO carrera_estudiante(Carnet_estudiante,Id_carrera) VALUES('DP01135200',1),('DP01135300',3),('DP01135790',2);
 
 INSERT INTO estudiante_asignatura_nota(Carnet_estudiante,Id_asignatura,Id_notas) VALUES('DP01135200',1,1),('DP01135400',2,2),('DP01135790',3,3);
-
-select estudiante.Carnet,estudiante.Nombre as nombre_estudiante,asignaturas.Nombre as asignatura,notas.Nota_final from estudiante_asignatura_nota inner join estudiante on estudiante_asignatura_nota.Carnet_estudiante=estudiante.Carnet inner join asignaturas on estudiante_asignatura_nota.Id_asignatura=asignaturas.Id inner join notas on estudiante_asignatura_nota.Id_notas=notas.Id;
